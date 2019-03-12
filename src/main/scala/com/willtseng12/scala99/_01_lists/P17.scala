@@ -10,7 +10,7 @@ object P17 {
   def splitRecursive[A](n: Int, list: List[A]): (List[A], List[A]) = {
 
     @tailrec
-    def rec(n: Int, list: List[A], leftList: List[A] = List()): (List[A], List[A]) = {
+    def rec(n: Int, list: List[A], leftList: List[A] = Nil): (List[A], List[A]) = {
       list match {
         case x :: xs => if (leftList.length < n) rec(n, xs, x :: leftList) else
           (leftList.reverse, list)

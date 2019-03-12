@@ -18,6 +18,6 @@ object P16 {
       }
     }
 
-    rec(list, List())
+    rec(list, Nil)
   }
 }
